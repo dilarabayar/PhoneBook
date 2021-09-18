@@ -7,18 +7,18 @@ import java.io.Serializable;
 public class Contact implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
     private Long id;
     private String name;
-    private String phoneNumber;
+    private String phone;
 
 
     public Contact() {}
 
-    public Contact(String name, String phoneNumber) {
+    public Contact(String name, String phone) {
         this.name = name;
-        this.phoneNumber = phoneNumber;
+        this.phone = phone;
     }
 
     public String getName() {
@@ -38,10 +38,10 @@ public class Contact implements Serializable {
     }
 
     public String getPhoneNumber() {
-        return phoneNumber;
+        return phone;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhoneNumber(String phone) {
+        this.phone = phone;
     }
 }

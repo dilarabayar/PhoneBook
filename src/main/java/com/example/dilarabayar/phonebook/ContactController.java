@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/phonebook")
+@RequestMapping("/contact")
 public class ContactController {
     private final ContactService contactService;
 
@@ -18,9 +18,9 @@ public class ContactController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<Contact>> getAllEmployees () {
-        List<Contact> employees = contactService.listAllContacts();
-        return new ResponseEntity<>(employees, HttpStatus.OK);
+    public ResponseEntity<List<Contact>> getAllContactsInfo () {
+        List<Contact> contacts = contactService.listAllContacts();
+        return new ResponseEntity<>(contacts, HttpStatus.OK);
     }
 
     @PostMapping("/add")
