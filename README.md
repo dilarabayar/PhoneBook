@@ -8,6 +8,7 @@ Contents
 
 
 ### Introduction
+---
 
 This application is a simplified version of PhoneBook which user can only add new contact and display them. In the future releases there'll be more functionalities in it. 
 
