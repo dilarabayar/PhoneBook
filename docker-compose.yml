@@ -1,0 +1,31 @@
+version: '1'
+services:
+
+  phonebook-mysql:
+    image: mysql:latest
+    container_name: kanban-postgres
+    volumes:
+      - mysql-data: /data.sql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mysql
+
+  phonebook-app:
+    build: ../phonebook
+    container_name: phonebook-app
+    environment:
+      - DB_SERVER=phonebook-mysql
+    ports:
+      - 8080:8080
+    links:
+      - phonebook-mysql
+
+  phonebook-ui:
+    build: ../phonebookUI
+    container_name: phonebook-ui
+    ports:
+      - 4200:80
+    links:
+      - phonebook-app
