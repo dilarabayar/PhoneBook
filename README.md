@@ -3,7 +3,9 @@ Contents
 
  * [Introduction](#introduction)
  * [Configuration](#configuration)
- * [Programs](#Programs)
+ * [How To Run](#howtorun)
+ * [Programs](#programs)
+
 
 
 
@@ -21,8 +23,20 @@ Application contains two part one is PhoneBook for backend and the other one is 
 application it contains docker-compose-yml to run whole program with single commmand!
 
 ```bash
+git clone https://github.com/dilarabayar/PhoneBook.git
+```
+
+```bash
 git clone https://github.com/dilarabayar/phonebookUI.git
 ```
+### How To Run
+---
+
++ Execute data.sql to create phonebook database and tables
++ Run phonebook backend application
++ Go to phonebookUI directory
++ Run ng serve on terminal
++ Go to http://localhost:4200/
 
 ### Programs
 ---
@@ -31,3 +45,4 @@ git clone https://github.com/dilarabayar/phonebookUI.git
 - MySQL for database
 - Angular for Frontend
 - Java SpringBoot for Backend
+
