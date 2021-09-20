@@ -20,6 +20,10 @@ This application is a simplified version of PhoneBook which user can only add ne
 Application contains two part one is PhoneBook for backend and the other one is phonebookUI for frontend. Make sure you downloaded them to the same directory. In Backend 
 application it contains docker-compose-yml to run whole program with single commmand!
 
+```bash
+git clone https://github.com/dilarabayar/phonebookUI.git
+```
+
 ### Programs
 ---
 
